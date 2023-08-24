@@ -1,0 +1,21 @@
+if __name__ == '__main__':
+    sc=[]
+    scor=[]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        scor.append(score)
+        ls=[score,name]
+        sc.append(ls)
+    sc.sort()
+    c= scor.count(min(scor))
+    if(c==len(sc)-1):
+        print(sc[c][1])        
+    else:
+        
+        for i in range(c,len(sc)):
+            print(sc[i][1])
+            if(i==len(sc)-1):
+                continue
+            elif(sc[i][0]!=sc[i+1][0]):
+                break
